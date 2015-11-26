@@ -14,6 +14,13 @@ namespace Alia
 				Keyboard = Keyboard.Numeric
 			};
 		}
+
+		public static Entry GetTaskNumberPicker(){
+			var entry = GetNumberPicker();
+			entry.BackgroundColor = ColourSettings.TaskBackground;
+			entry.TextColor = ColourSettings.WhiteTextColour;
+			return entry;
+		}
 	}
 }
 
