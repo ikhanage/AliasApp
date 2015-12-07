@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Alia
 {
@@ -17,4 +16,3 @@ namespace Alia
 		}
 	}
 }
-

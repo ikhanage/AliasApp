@@ -50,10 +50,14 @@
     <Compile Include="Views\Tasks Page\TextTask.cs" />
     <Compile Include="Views\Tasks Page\NavTask.cs" />
     <Compile Include="Views\Tasks Page\QuizTask.cs" />
-    <Compile Include="PageTypes.cs" />
     <Compile Include="Database\DatabaseTables.cs" />
     <Compile Include="Database\ISQLite.cs" />
     <Compile Include="Database\DatabaseSetUp.cs" />
+    <Compile Include="Database\SetUpDatabaseTasks.cs" />
+    <Compile Include="Enums\PageTypes.cs" />
+    <Compile Include="Enums\TaskNames.cs" />
+    <Compile Include="Database\GetText.cs" />
+    <Compile Include="TaskTextFiles\ILoadFile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -105,5 +109,13 @@
     <Folder Include="Settings\" />
     <Folder Include="Views\Tasks Page\" />
     <Folder Include="Database\" />
+    <Folder Include="Enums\" />
+    <Folder Include="TaskTextFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TaskTextFiles\TextTest.txt">
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
