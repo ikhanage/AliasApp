@@ -1,9 +1,9 @@
-﻿using System;
-
-namespace Alia
+﻿namespace Alia
 {
 	public enum PageTypes
 	{
+		TextPage,
+		QuizPage,
+		NavPage
 	}
 }
-
