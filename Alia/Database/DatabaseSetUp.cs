@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using SQLite;
 
 namespace Alia
@@ -13,18 +12,25 @@ namespace Alia
 			db = DependencyService.Get<ISQLite> ().GetConnection ();
 		}
 
-		public static void CreateDBTables ()
+		public void CreateDBTables ()
 		{
 			db.CreateTable<TaskTable> ();
 			db.CreateTable<NavTaskTable> ();
 			db.CreateTable<QuizTaskTable> ();
 		}
 
-		public static void DestoryTables()
-		{
+		public void DestoryTables()
+		{			
 			db.DropTable<TaskTable> ();
 			db.DropTable<NavTaskTable> ();
 			db.DropTable<QuizTaskTable> ();
+		}
+
+		public void SetUpTasks()
+		{
+			db.InsertAll (SetUpDatabaseTasks.SetUpNavTasks ());
+			db.InsertAll (SetUpDatabaseTasks.SetUpQuizTasks ());
+			db.InsertAll (SetUpDatabaseTasks.SetUpTextTask ());
 		}
 	}
 }
