@@ -46,6 +46,13 @@
     <Compile Include="Converters\CountdownToDaysConverter.cs" />
     <Compile Include="Settings\AppSettings.cs" />
     <Compile Include="Settings\ColourSettings.cs" />
+    <Compile Include="Pages\TaskPage.cs" />
+    <Compile Include="Views\Tasks Page\TextTask.cs" />
+    <Compile Include="Views\Tasks Page\NavTask.cs" />
+    <Compile Include="Views\Tasks Page\QuizTask.cs" />
+    <Compile Include="PageTypes.cs" />
+    <Compile Include="Database\DatabaseTables.cs" />
+    <Compile Include="Database\ISQLite.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -74,6 +81,12 @@
     <Reference Include="Xamarin.Forms.Platform">
       <HintPath>..\packages\Xamarin.Forms.2.0.0.6490\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="SQLitePCL.raw">
+      <HintPath>..\packages\SQLitePCL.raw_basic.0.7.1\lib\portable-net45+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCL.raw.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.0.11\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -89,5 +102,7 @@
     <Folder Include="Controls\" />
     <Folder Include="Converters\" />
     <Folder Include="Settings\" />
+    <Folder Include="Views\Tasks Page\" />
+    <Folder Include="Database\" />
   </ItemGroup>
 </Project>
