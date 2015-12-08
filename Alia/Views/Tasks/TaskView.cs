@@ -1,27 +1,26 @@
 ﻿using Xamarin.Forms;
 using Ninject;
+using System.Collections.Generic;
 
 namespace Alia
 {
 	public class TaskView : ContentView
 	{
-		readonly ITaskViewHelper _taskViewHelper;
+		readonly IDatabaseHelper _db;
 
 		public TaskView ()
 		{
 			var kernel = new StandardKernel();
-			_taskViewHelper = kernel.Get<TaskViewHelper>();
+			_db = kernel.Get<DatabaseHelper>();
 
 			var layout = new StackLayout ();
-
 			layout.Padding = AppSettings.LayoutPadding;
-			
-			var item1 = _taskViewHelper.CreateGridItem ("Text 1 which is a test like. Don't be bitter about it.");
-			var item2 = _taskViewHelper.CreateGridItem ("Text 2");
 
-			layout.Children.Add (item1);
-			layout.Children.Add (item2);
-			layout.Children.Add (_taskViewHelper.CreateGridItem ("I am a really big dumb dumb"));
+			var items = _db.GetTasks ();
+
+			foreach (var item in items) {
+				layout.Children.Add (new TaskViewItem (item.Name, item.UnlockCode));
+			}
 
 			Content = layout;
 		}

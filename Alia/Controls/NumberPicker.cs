@@ -2,25 +2,24 @@
 
 namespace Alia
 {
-	public static class NumberPicker
+	public class NumberPicker : Entry
 	{
-		public static Entry GetNumberPicker ()
+		public NumberPicker  ()
 		{
-			return new Entry
-			{
-				VerticalOptions = LayoutOptions.CenterAndExpand,
-				HorizontalOptions = LayoutOptions.Center,
-				WidthRequest = 30,
-				Keyboard = Keyboard.Numeric
-			};
+			VerticalOptions = LayoutOptions.CenterAndExpand;
+			HorizontalOptions = LayoutOptions.Center;
+			WidthRequest = 30;
+			Keyboard = Keyboard.Numeric;
 		}
+	}
 
-		public static Entry GetTaskNumberPicker(){
-			var entry = GetNumberPicker();
-			entry.BackgroundColor = ColourSettings.TaskBackground;
-			entry.TextColor = ColourSettings.WhiteTextColour;
-			return entry;
+	public class TaskNumberPicker : NumberPicker
+	{
+		public TaskNumberPicker()
+		{			
+			BackgroundColor = ColourSettings.TaskBackground;
+			TextColor = ColourSettings.WhiteTextColour;
+			WidthRequest = 45;
 		}
 	}
 }
-

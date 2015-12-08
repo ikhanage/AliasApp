@@ -4,13 +4,18 @@ namespace Alia
 {
 	public class StartPage : ContentPage
 	{
-	 	Entry numberInput1 = NumberPicker.GetNumberPicker ();
-		Entry numberInput2 = NumberPicker.GetNumberPicker ();
-		Entry numberInput3 = NumberPicker.GetNumberPicker ();
+		Entry numberInput1;
+		Entry numberInput2;
+		Entry numberInput3;
+
 		Countdown countdown;
 
 		public StartPage ()
 		{
+			numberInput1 = new NumberPicker(); 
+        	numberInput2 = new NumberPicker();
+         	numberInput3 = new NumberPicker(); 
+
 			countdown = new Countdown ();
 			var countdownDay = GetCountdownLabel ();
 			var countdownHours = GetCountdownLabel ();

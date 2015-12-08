@@ -4,11 +4,11 @@ namespace Alia
 {
 	public static class SetUpDatabaseTasks
 	{
-		public static List<TaskTable> SetUpTextTask()
+		public static List<TextTaskTable> SetUpTextTask()
 		{
-			var textTasks = new List<TaskTable> ();
+			var textTasks = new List<TextTaskTable> ();
 
-			var taskTask = new TaskTable { Id = 1, Name = TaskNames.TextTest.ToString(), Text = GetText.GetTextPageText (TaskNames.TextTest), UnlockCode = 123, PageType = PageTypes.TextPage, Completed = false };
+			var taskTask = new TextTaskTable (1, TaskNames.TextTest, 123);
 
 			textTasks.Add (taskTask);
 			return textTasks;

@@ -11,6 +11,8 @@ namespace Alia
 		public static Color TaskEntryBackground = Color.FromRgb(112, 112, 163);
 
 		public static Color WhiteTextColour = Color.White;
+
+		public static Color BlackTextColour = Color.Black;
 	}
 }
 

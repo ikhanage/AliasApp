@@ -14,5 +14,13 @@ namespace Alia
 				return Device.OS == TargetPlatform.iOS ? new Thickness (10, 25, 10, 0) : new Thickness (10, 5, 10, 0);
 			}
 		}
+
+		public static double LargeFontSize
+		{
+			get
+			{
+				return Device.GetNamedSize(NamedSize.Small, typeof(Label));
+			}
+		}
 	}
 }

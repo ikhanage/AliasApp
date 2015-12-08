@@ -27,7 +27,7 @@ namespace Alia.Droid
 			var standardKernel = new StandardKernel();
 			var resolverContainer = new NinjectContainer(standardKernel);
 
-			standardKernel.Bind<ITaskViewHelper>().To<TaskViewHelper>();
+			standardKernel.Bind<IDatabaseHelper> ().To<DatabaseHelper> ();
 
 			Resolver.SetResolver(resolverContainer.GetResolver());
 		}

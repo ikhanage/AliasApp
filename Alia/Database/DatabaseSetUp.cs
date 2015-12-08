@@ -14,14 +14,14 @@ namespace Alia
 
 		public void CreateDBTables ()
 		{
-			db.CreateTable<TaskTable> ();
+			db.CreateTable<TextTaskTable> ();
 			db.CreateTable<NavTaskTable> ();
 			db.CreateTable<QuizTaskTable> ();
 		}
 
 		public void DestoryTables()
 		{			
-			db.DropTable<TaskTable> ();
+			db.DropTable<TextTaskTable> ();
 			db.DropTable<NavTaskTable> ();
 			db.DropTable<QuizTaskTable> ();
 		}
@@ -32,7 +32,7 @@ namespace Alia
 			//db.InsertAll (SetUpDatabaseTasks.SetUpQuizTasks ());
 			db.InsertAll (SetUpDatabaseTasks.SetUpTextTask ());
 
-			var test = db.Table<TaskTable> ().Where(x => x.Id == 1);
+			var test = db.Table<TextTaskTable> ().Where(x => x.Id == 1);
 		}
 	}
 }

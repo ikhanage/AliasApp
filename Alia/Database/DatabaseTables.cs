@@ -1,8 +1,9 @@
 ﻿using SQLite;
+using System.Text.RegularExpressions;
 
 namespace Alia
 {
-	public class TaskTable
+	public class TextTaskTable
 	{
 		[PrimaryKey] public int Id { get; set;}
 		public string Name { get; set; }
@@ -12,19 +13,31 @@ namespace Alia
 		public bool Completed { get; set; }
 		public bool Locked { get; set; }
 
-		public TaskTable(int id, TaskNames taskName, int unlockCode)
+		public TextTaskTable(int id, TaskNames taskName, int unlockCode)
 		{
 			Id = id;
-			Name = taskName.ToString ();
+			Name = EnumToTitle (taskName);
 			Text = GetText.GetTextPageText (taskName);
 			UnlockCode = unlockCode;
 			PageType = PageTypes.TextPage;
 			Completed = false;
-			Locked = false;
+			Locked = true;
+		}
+
+		public TextTaskTable(){}
+
+		static string EnumToTitle(TaskNames taskName)
+		{
+			var regex = new Regex(@"
+                (?<=[A-Z])(?=[A-Z][a-z]) |
+                 (?<=[^A-Z])(?=[A-Z]) |
+                 (?<=[A-Za-z])(?=[^A-Za-z])", RegexOptions.IgnorePatternWhitespace);
+
+			return regex.Replace (taskName.ToString(), " ");
 		}
 	}
 
-	public class QuizTaskTable : TaskTable
+	public class QuizTaskTable : TextTaskTable
 	{
 		[Indexed] public int Fk { get; set; }
 		public string Response1 { get; set; }
@@ -43,9 +56,11 @@ namespace Alia
 			Answer = answer;
 			PageType = PageTypes.QuizPage;
 		}
+
+		public QuizTaskTable(){}
 	}
 
-	public class NavTaskTable : TaskTable
+	public class NavTaskTable : TextTaskTable
 	{
 		[Indexed] public int Fk { get; set; }
 		public int CodeToComplete { get; set; }
@@ -56,5 +71,7 @@ namespace Alia
 			CodeToComplete = codeToComplete;
 			PageType = PageTypes.NavPage;
 		}
+
+		public NavTaskTable(){}
 	}
 }
