@@ -19,7 +19,7 @@ namespace Alia
 			var items = _db.GetTasks ();
 
 			foreach (var item in items) {
-				layout.Children.Add (new TaskViewItem (item.Name, item.UnlockCode));
+				layout.Children.Add (new TaskViewItem (item));
 			}
 
 			Content = layout;

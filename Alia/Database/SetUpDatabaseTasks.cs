@@ -9,6 +9,7 @@ namespace Alia
 			var textTasks = new List<TextTaskTable> ();
 
 			var taskTask = new TextTaskTable (1, TaskNames.TextTest, 123);
+			taskTask.Locked = false;
 
 			textTasks.Add (taskTask);
 			return textTasks;

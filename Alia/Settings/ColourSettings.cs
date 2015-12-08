@@ -4,6 +4,10 @@ namespace Alia
 {
 	public static class ColourSettings
 	{
+		public static Color LockedTask = Color.Red;
+
+		public static Color UnlockedTask = Color.Olive;
+
 		public static Color CompletedTask = Color.FromRgb(51, 153, 255);
 
 		public static Color TaskBackground = Color.FromRgb(102, 102, 153);
