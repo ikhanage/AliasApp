@@ -4,8 +4,11 @@ namespace Alia
 {
 	public class TaskViewItem : Grid
 	{
+		public int Id;
+
 		public TaskViewItem(TextTaskTable item)
 		{
+			Id = item.Id;
 			Padding = new Thickness (0, 0, 0, 0);
 			RowDefinitions.Add(new RowDefinition { Height = new GridLength (50, GridUnitType.Absolute) });
 

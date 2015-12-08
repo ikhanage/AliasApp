@@ -1,6 +1,7 @@
 ﻿using Xamarin.Forms;
 using Ninject;
 using System.Collections.Generic;
+using System;
 
 namespace Alia
 {
@@ -18,11 +19,22 @@ namespace Alia
 
 			var items = _db.GetTasks ();
 
+			var gesture = new TapGestureRecognizer();
+
+			gesture.Tapped += Tap;
+
 			foreach (var item in items) {
-				layout.Children.Add (new TaskViewItem (item));
+				var taskViewItem = new TaskViewItem (item);
+				taskViewItem.GestureRecognizers.Add (gesture);
+				layout.Children.Add (taskViewItem);
 			}
 
 			Content = layout;
+		}
+
+		static void Tap(object sender, EventArgs e)
+		{
+			var task = (TaskViewItem)sender;
 		}
 	}
 }
