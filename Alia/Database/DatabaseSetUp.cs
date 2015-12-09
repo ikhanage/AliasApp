@@ -29,7 +29,7 @@ namespace Alia
 		public void SetUpTasks()
 		{
 			//db.InsertAll (SetUpDatabaseTasks.SetUpNavTasks ());
-			//db.InsertAll (SetUpDatabaseTasks.SetUpQuizTasks ());
+			db.InsertAll (SetUpDatabaseTasks.SetUpQuizTasks ());
 			db.InsertAll (SetUpDatabaseTasks.SetUpTextTask ());
 		}
 	}

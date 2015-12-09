@@ -26,6 +26,9 @@ namespace Alia
 		{
 			var quizTasks = new List<QuizTaskTable> ();
 
+			var quizTask = new QuizTaskTable (1, TaskNames.TextTest, 123, "1", "2", "3", "4", 1);
+
+			quizTasks.Add (quizTask);
 			return quizTasks;
 		}
 	}

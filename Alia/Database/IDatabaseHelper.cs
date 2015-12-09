@@ -7,5 +7,6 @@ namespace Alia
 		void UpdateLockStatus (int id, bool locked = false);
 		void UpdateCompletedStatus (int id, bool completed = true);
 		List<TextTaskTable> GetTasks ();
+		TextTaskTable GetTaskById(int id);
 	}
 }

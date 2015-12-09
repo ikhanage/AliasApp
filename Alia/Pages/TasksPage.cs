@@ -8,9 +8,7 @@ namespace Alia
 		{			
 			BackgroundImage = AppSettings.AppBackgroundImage;
 
-			Content = new TaskView();
+			Content = new MainView();
 		}
 	}
 }
-
-
