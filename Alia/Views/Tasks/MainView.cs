@@ -44,13 +44,12 @@ namespace Alia
 
 		 void TaskTap(object sender, EventArgs e)
 		{
-			var layout = new StackLayout ();
 			var viewItem = (TaskViewItem)sender;
 			var task = _db.GetTaskById (viewItem.Id);
 
 			switch (task.PageType) {
 				case PageTypes.TextPage:
-					
+					Content = new TextTaskView (task);
 					break;
 
 				case PageTypes.NavPage:
@@ -58,11 +57,9 @@ namespace Alia
 					break;
 
 				case PageTypes.QuizPage:
-					
+					Content = new QuizTaskView ((QuizTaskTable)task);
 					break;
 			}
-
-			Content = null;
 		}
 
 		void BackTap(object sender, EventArgs e)

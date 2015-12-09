@@ -1,1 +1,5 @@
-﻿I am a winner.
+﻿This is a test file that I have made to check how this works in practice.  I hope that is is good.
+
+I'm especially concerned about newlines and specical ch@recters. !@#$%^&*()_+.
+
+If this is going to work the a big fat yay, but if it doesn't then I've got some rethinking to do. But hopefully it'll just be a matter of retweeking

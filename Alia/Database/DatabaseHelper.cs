@@ -37,21 +37,20 @@ namespace Alia
 
 		public TextTaskTable GetTaskById(int id)
 		{
-			var textTask = db.Table<TextTaskTable> ().Single (x => x.Id == id);
-
 			var quizTask = db.Table<QuizTaskTable> ().SingleOrDefault (x => x.Id == id);
-
-			var navTask = db.Table<NavTaskTable> ().SingleOrDefault (x => x.Id == id);
 
 			if (quizTask != null) {
 				return quizTask;
 			}
 
+			var navTask = db.Table<NavTaskTable> ().SingleOrDefault (x => x.Id == id);
+
+
 			if (navTask != null) {
 				return navTask;
 			}
 
-			return textTask;
+			return db.Table<TextTaskTable> ().Single (x => x.Id == id);
 		}
 	}
 }
