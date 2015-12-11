@@ -6,14 +6,16 @@ namespace Alia
 	{
 		public TextTaskView (TextTaskTable textTask)
 		{
+			Padding = AppSettings.LayoutPadding;
+
 			Children.Add (
-				new Label {
-					Text = textTask.Name,
+				new TaskLabel {
+					Text = textTask.Name
 				}
 			);
 
 			Children.Add (
-				new Label {
+				new TaskLabel {
 					Text = textTask.Text
 				}
 			);

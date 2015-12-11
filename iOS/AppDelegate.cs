@@ -30,7 +30,6 @@ namespace Alia.iOS
 			var standardKernel = new StandardKernel();
 			var resolverContainer = new NinjectContainer(standardKernel);
 
-			standardKernel.Bind<ITaskViewHelper>().To<TaskViewItem>();
 			standardKernel.Bind<IDatabaseHelper> ().To<DatabaseHelper> ();
 
 			Resolver.SetResolver(resolverContainer.GetResolver());
