@@ -15,6 +15,14 @@ namespace Alia
 			}
 		}
 
+		public static Thickness TaskPadding 
+		{
+			get
+			{
+				return Device.OS == TargetPlatform.iOS ? new Thickness (20, 25, 20, 0) : new Thickness (20, 5, 20, 0);
+			}
+		}
+
 		public static double LargeFontSize
 		{
 			get

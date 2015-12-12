@@ -13,7 +13,6 @@ namespace Alia
 		{
 			var kernel = new StandardKernel();
 			_db = kernel.Get<DatabaseHelper> ();
-
 			Content = TasksLayout ();
 		}
 

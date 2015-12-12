@@ -11,5 +11,20 @@ namespace Alia
 			TextColor = ColourSettings.WhiteTextColour;
 		}
 	}
-}
 
+	public class TaskHeader : TaskLabel
+	{
+		public TaskHeader()
+		{
+			FontSize = 24;
+		}
+	}
+
+	public class QuizButton : Button
+	{
+		public QuizButton()
+		{
+
+		}
+	}
+}

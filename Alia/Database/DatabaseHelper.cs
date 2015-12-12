@@ -32,7 +32,10 @@ namespace Alia
 
 		public List<TextTaskTable> GetTasks()
 		{
-			return db.Table<TextTaskTable> ().ToList();
+			var tasks = new List<TextTaskTable> ();
+			tasks.AddRange (db.Table<TextTaskTable> ().ToList ());
+			tasks.AddRange (db.Table<QuizTaskTable> ().ToList ());
+			return tasks.OrderBy (x => x.Id).ToList ();
 		}
 
 		public TextTaskTable GetTaskById(int id)
