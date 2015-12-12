@@ -1,18 +1,36 @@
 ﻿using System;
 
 using Xamarin.Forms;
+using Ninject;
 
 namespace Alia
 {
 	public class TaskPage : ContentPage
 	{
-		public TaskPage ()
+		public TaskPage (int id)
 		{
-			Content = new StackLayout { 
-				Children = {
-					new Label { Text = "Hello ContentPage" }
-				}
-			};
+			var kernel = new StandardKernel();
+			var _db = kernel.Get<DatabaseHelper> ();
+			var task = _db.GetTaskById (id);
+
+			Padding = AppSettings.LargeFontSize;
+			BackgroundImage = AppSettings.AppBackgroundImage;
+
+			switch (task.PageType) {
+			case PageTypes.TextPage:
+				Content = new TextTaskView (task);					
+				break;
+
+			case PageTypes.NavPage:
+
+				break;
+
+			case PageTypes.QuizPage:
+				Content = new QuizTaskView ((QuizTaskTable)task);
+				break;
+			}
 		}
+
+
 	}
 }

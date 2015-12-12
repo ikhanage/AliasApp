@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using System;
 
 namespace Alia
 {
@@ -7,6 +8,18 @@ namespace Alia
 		public TextTaskView (TextTaskTable textTask)
 		{
 			Padding = AppSettings.TaskPadding;
+
+			var gesture = new TapGestureRecognizer();
+
+			gesture.Tapped += BackTap;
+
+			var home = new Label {
+				Text = "<-- HOME",
+				HorizontalOptions = HorizontalOptions
+			};
+
+			home.GestureRecognizers.Add (gesture);
+			Children.Add (home);
 
 			Children.Add (
 				new TaskHeader {
@@ -19,6 +32,11 @@ namespace Alia
 					Text = textTask.Text
 				}
 			);
+		}
+
+		void BackTap(object sender, EventArgs e)
+		{
+			Navigation.PopModalAsync ();
 		}
 	}
 }

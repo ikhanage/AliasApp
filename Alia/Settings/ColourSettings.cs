@@ -19,4 +19,3 @@ namespace Alia
 		public static Color BlackTextColour = Color.Black;
 	}
 }
-

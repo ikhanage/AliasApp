@@ -41,29 +41,10 @@ namespace Alia
 			throw new NotImplementedException ();
 		}
 
-		 void TaskTap(object sender, EventArgs e)
+		void TaskTap(object sender, EventArgs e)
 		{
 			var viewItem = (TaskViewItem)sender;
-			var task = _db.GetTaskById (viewItem.Id);
-
-			switch (task.PageType) {
-				case PageTypes.TextPage:
-					Content = new TextTaskView (task);
-					break;
-
-				case PageTypes.NavPage:
-					
-					break;
-
-				case PageTypes.QuizPage:
-					Content = new QuizTaskView ((QuizTaskTable)task);
-					break;
-			}
-		}
-
-		void BackTap(object sender, EventArgs e)
-		{
-			Content = TasksLayout ();
+			Navigation.PushModalAsync (new TaskPage(viewItem.Id));
 		}
 	}
 }

@@ -44,15 +44,23 @@ namespace Alia
 		public string Response2 { get; set; }
 		public string Response3 { get; set; }
 		public string Response4 { get; set; }
+		public string ResponseText1 { get; set; }
+		public string ResponseText2 { get; set; }
+		public string ResponseText3 { get; set; }
+		public string ResponseText4 { get; set; }
 		public int Answer  { get; set; }
 
-		public QuizTaskTable (int id, TaskNames taskName, int unlockCode, string response1, string response2, string response3, string response4, int answer) : base (id, taskName, unlockCode)
+		public QuizTaskTable (int id, TaskNames taskName, int unlockCode, string response1, string response2, string response3, string response4, string responseText1, string responseText2, string responseText3, string responseText4, int answer) : base (id, taskName, unlockCode)
 		{
 			Fk = id;
 			Response1 = response1;
 			Response2 = response2;
 			Response3 = response3;
 			Response4 = response4;
+			ResponseText1 = responseText1;
+			ResponseText2 = responseText2;
+			ResponseText3 = responseText3;
+			ResponseText4 = responseText4;
 			Answer = answer;
 			PageType = PageTypes.QuizPage;
 		}
