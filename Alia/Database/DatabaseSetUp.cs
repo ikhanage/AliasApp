@@ -1,5 +1,6 @@
 ﻿using Xamarin.Forms;
 using SQLite;
+using System.Linq;
 
 namespace Alia
 {
@@ -28,6 +29,9 @@ namespace Alia
 
 		public void SetUpTasks()
 		{
+			if (db.Table<TextTaskTable> ().Any ())
+				return;
+			
 			db.InsertAll (SetUpDatabaseTasks.SetUpNavTasks ());
 			db.InsertAll (SetUpDatabaseTasks.SetUpTextTask ());
 			db.InsertAll (SetUpDatabaseTasks.SetUpQuizTasks ());
