@@ -7,11 +7,16 @@ namespace Alia
 	{
 		readonly int Answer;
 		readonly int UnlockCode;
+		readonly Label ResponseText;
+		readonly Label AnswerLabel;
 
 		public QuizTaskView (QuizTaskTable quizTask) : base (quizTask)
 		{
 			Answer = quizTask.Answer;
 			UnlockCode = quizTask.UnlockCode;
+
+			ResponseText = new TaskLabel ();
+			AnswerLabel = new TaskLabel ();
 
 			var taskButton1 = new TaskButtons (quizTask.Response1, quizTask.ResponseText1, 1);
          	var taskButton2 = new TaskButtons (quizTask.Response2, quizTask.ResponseText2, 2);
@@ -27,24 +32,18 @@ namespace Alia
 			Children.Add (taskButton2);
 			Children.Add (taskButton3);
 			Children.Add (taskButton4);
+			Children.Add (ResponseText);
+			Children.Add (AnswerLabel);
 		}
 
 		void AnswerTap (object sender, EventArgs e)
 		{
 			var task = (TaskButtons) sender;
 
-			Children.Add (
-				new Label {
-					Text = task.ResponseText
-				}
-			);
+			ResponseText.Text = task.ResponseText;
 
 			if (Answer == task.ButtonId) {
-				Children.Add (
-					new Label{
-						Text = UnlockCode.ToString()
-					}
-				);
+				AnswerLabel.Text = UnlockCode.ToString();
 			}
 		}
 	}
