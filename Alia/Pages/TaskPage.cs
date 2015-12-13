@@ -16,21 +16,23 @@ namespace Alia
 			Padding = AppSettings.LargeFontSize;
 			BackgroundImage = AppSettings.AppBackgroundImage;
 
-			switch (task.PageType) {
-			case PageTypes.TextPage:
-				Content = new TextTaskView (task);					
-				break;
+			if (task.Locked) {
+				Content = new LockView (task.Id, task.UnlockCode);
+			} else {
+				switch (task.PageType) {
+				case PageTypes.TextPage:
+					Content = new TextTaskView (task);					
+					break;
 
-			case PageTypes.NavPage:
+				case PageTypes.NavPage:
 
-				break;
+					break;
 
-			case PageTypes.QuizPage:
-				Content = new QuizTaskView ((QuizTaskTable)task);
-				break;
+				case PageTypes.QuizPage:
+					Content = new QuizTaskView ((QuizTaskTable)task);
+					break;
+				}
 			}
 		}
-
-
 	}
 }

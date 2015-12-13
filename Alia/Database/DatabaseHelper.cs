@@ -16,7 +16,16 @@ namespace Alia
 
 		public void UpdateLockStatus(int id, bool locked = false)
 		{
-			var task = db.Table<TextTaskTable> ().Single (x => x.Id == id);
+			TextTaskTable task;
+
+			task = db.Table<TextTaskTable> ().SingleOrDefault (x => x.Id == id);
+
+			if(task == null)
+				task = db.Table<QuizTaskTable> ().SingleOrDefault (x => x.Id == id);
+
+			if(task == null)
+				task = db.Table<NavTaskTable> ().Single (x => x.Id == id);
+			
 			task.Locked = locked;
 
 			db.Update (task);

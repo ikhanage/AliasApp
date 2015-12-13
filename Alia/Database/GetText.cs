@@ -35,7 +35,7 @@ namespace Alia
 
 				return text;
 			}
-			catch (Exception e)
+			catch (Exception)
 			{
 				return string.Format("Unable to read {0} file.", fileName);
 			}
