@@ -37,6 +37,7 @@ namespace Alia
 		void AnswerTap (object sender, EventArgs e)
 		{
 			var task = (TaskButtons) sender;
+			task.IsVisible = false;
 
 			ResponseText.Text = task.ResponseText;
 
