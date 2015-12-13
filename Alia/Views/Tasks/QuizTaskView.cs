@@ -8,7 +8,6 @@ namespace Alia
 		readonly int Answer;
 		readonly int UnlockCode;
 		readonly Label ResponseText;
-		readonly Label AnswerLabel;
 
 		public QuizTaskView (QuizTaskTable quizTask) : base (quizTask)
 		{
@@ -16,7 +15,6 @@ namespace Alia
 			UnlockCode = quizTask.UnlockCode;
 
 			ResponseText = new TaskLabel ();
-			AnswerLabel = new TaskLabel ();
 
 			var taskButton1 = new TaskButtons (quizTask.Response1, quizTask.ResponseText1, 1);
          	var taskButton2 = new TaskButtons (quizTask.Response2, quizTask.ResponseText2, 2);

@@ -5,10 +5,13 @@ namespace Alia
 {
 	public class TextTaskView : StackLayout
 	{
+		protected readonly Label AnswerLabel;
+
 		public TextTaskView (TextTaskTable textTask)
 		{
 			Padding = AppSettings.TaskPadding;
 
+			AnswerLabel = new TaskLabel ();
 			var gesture = new TapGestureRecognizer();
 
 			gesture.Tapped += BackTap;
