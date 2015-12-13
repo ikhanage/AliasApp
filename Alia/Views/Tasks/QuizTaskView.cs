@@ -13,6 +13,7 @@ namespace Alia
 		{
 			Answer = quizTask.Answer;
 			UnlockCode = quizTask.UnlockCode;
+			AnswerLabel.Text = string.Empty;
 
 			ResponseText = new TaskLabel ();
 
@@ -42,7 +43,7 @@ namespace Alia
 			ResponseText.Text = task.ResponseText;
 
 			if (Answer == task.ButtonId) {
-				AnswerLabel.Text = UnlockCode.ToString();
+				AnswerLabel.Text = NextTaskUnlockCode;
 			}
 		}
 	}

@@ -14,12 +14,15 @@ namespace Alia
 
 			CodeToUnlock = navTask.CodeToComplete;
 			UnlockCode = navTask.UnlockCode;
+			AnswerLabel.Text = string.Empty;
+
+			Children.Add (answerEntry);
 		}
 
 		void AnswerEntryChanged(object sender, TextChangedEventArgs e)
 		{
 			if (e.NewTextValue == CodeToUnlock.ToString())
-				AnswerLabel.Text = UnlockCode.ToString ();
+				AnswerLabel.Text = NextTaskUnlockCode;
 
 			if (e.NewTextValue.Length > 3) 
 				((Entry)sender).Text = string.Empty;

@@ -6,12 +6,16 @@ namespace Alia
 	public class TextTaskView : StackLayout
 	{
 		protected readonly AnswerLabel AnswerLabel;
+		protected readonly string NextTaskUnlockCode;
 
 		public TextTaskView (TextTaskTable textTask)
 		{
 			Padding = AppSettings.TaskPadding;
 
 			AnswerLabel = new AnswerLabel ();
+			AnswerLabel.Text = textTask.NextTaskUnlockCode.ToString ();
+			NextTaskUnlockCode = textTask.NextTaskUnlockCode.ToString ();
+
 			var gesture = new TapGestureRecognizer();
 
 			gesture.Tapped += BackTap;
@@ -35,6 +39,9 @@ namespace Alia
 					Text = textTask.Text
 				}
 			);
+
+
+			Children.Add (AnswerLabel);
 		}
 
 		void BackTap(object sender, EventArgs e)

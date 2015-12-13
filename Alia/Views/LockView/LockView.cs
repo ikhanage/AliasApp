@@ -28,11 +28,7 @@ namespace Alia
 			if(UnlockCode.ToString() == e.NewTextValue)
 			{
 				_db.UpdateLockStatus (TaskId);
-				Children.Add (
-					new TaskLabel {
-						Text = "Unlocked!"
-					}
-				);
+				Navigation.PopModalAsync ();
 			}
 		}
 	}

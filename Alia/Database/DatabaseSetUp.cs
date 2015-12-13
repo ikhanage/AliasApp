@@ -1,6 +1,5 @@
 ﻿using Xamarin.Forms;
 using SQLite;
-using System.Collections.Generic;
 
 namespace Alia
 {
@@ -29,14 +28,9 @@ namespace Alia
 
 		public void SetUpTasks()
 		{
-			//db.InsertAll (SetUpDatabaseTasks.SetUpNavTasks ());
+			db.InsertAll (SetUpDatabaseTasks.SetUpNavTasks ());
 			db.InsertAll (SetUpDatabaseTasks.SetUpTextTask ());
 			db.InsertAll (SetUpDatabaseTasks.SetUpQuizTasks ());
-		}
-
-		void SaveQuizTasks(List<QuizTaskTable> quizTasks)
-		{
-
 		}
 	}
 }

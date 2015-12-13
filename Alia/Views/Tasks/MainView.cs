@@ -36,11 +36,6 @@ namespace Alia
 			return layout;
 		}
 
-		StackLayout TaskLayout()
-		{
-			throw new NotImplementedException ();
-		}
-
 		void TaskTap(object sender, EventArgs e)
 		{
 			var viewItem = (TaskViewItem)sender;

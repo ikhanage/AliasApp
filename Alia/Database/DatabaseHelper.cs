@@ -44,6 +44,7 @@ namespace Alia
 			var tasks = new List<TextTaskTable> ();
 			tasks.AddRange (db.Table<TextTaskTable> ().ToList ());
 			tasks.AddRange (db.Table<QuizTaskTable> ().ToList ());
+			tasks.AddRange (db.Table<NavTaskTable> ().ToList ());
 			return tasks.OrderBy (x => x.Id).ToList ();
 		}
 

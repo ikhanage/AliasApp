@@ -25,7 +25,7 @@ namespace Alia
 					break;
 
 				case PageTypes.NavPage:
-
+					Content = new NavTaskView ((NavTaskTable)task);
 					break;
 
 				case PageTypes.QuizPage:

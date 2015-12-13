@@ -9,11 +9,12 @@ namespace Alia
 		public string Name { get; set; }
 		public string Text { get; set; }
 		public int UnlockCode { get; set; }
+		public int NextTaskUnlockCode { get; set; }
 		public PageTypes PageType { get; set; }
 		public bool Completed { get; set; }
 		public bool Locked { get; set; }
 
-		public TextTaskTable(int id, TaskNames taskName, int unlockCode)
+		public TextTaskTable(int id, TaskNames taskName, int unlockCode, int nextTaskUnlockCode)
 		{
 			Id = id;
 			Name = EnumToTitle (taskName);
@@ -22,6 +23,7 @@ namespace Alia
 			PageType = PageTypes.TextPage;
 			Completed = false;
 			Locked = true;
+			NextTaskUnlockCode = nextTaskUnlockCode;
 		}
 
 		public TextTaskTable(){}
@@ -50,7 +52,7 @@ namespace Alia
 		public string ResponseText4 { get; set; }
 		public int Answer  { get; set; }
 
-		public QuizTaskTable (int id, TaskNames taskName, int unlockCode, string response1, string response2, string response3, string response4, string responseText1, string responseText2, string responseText3, string responseText4, int answer) : base (id, taskName, unlockCode)
+		public QuizTaskTable (int id, TaskNames taskName, int unlockCode, int nextTaskUnlockCode, string response1, string response2, string response3, string response4, string responseText1, string responseText2, string responseText3, string responseText4, int answer) : base (id, taskName, unlockCode, nextTaskUnlockCode)
 		{
 			Fk = id;
 			Response1 = response1;
@@ -73,7 +75,7 @@ namespace Alia
 		[Indexed] public int Fk { get; set; }
 		public int CodeToComplete { get; set; }
 
-		public NavTaskTable (int id, TaskNames taskName, int unlockCode, int codeToComplete) : base (id, taskName, unlockCode)
+		public NavTaskTable (int id, TaskNames taskName, int unlockCode, int nextTaskUnlockCode, int codeToComplete) : base (id, taskName, unlockCode, nextTaskUnlockCode)
 		{
 			Fk = id;
 			CodeToComplete = codeToComplete;
