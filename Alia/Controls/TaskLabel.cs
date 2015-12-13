@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Alia
 {
@@ -20,11 +19,11 @@ namespace Alia
 		}
 	}
 
-	public class QuizButton : Button
+	public class AnswerLabel : TaskHeader
 	{
-		public QuizButton()
+		public AnswerLabel()
 		{
-
+			TextColor = ColourSettings.Red;
 		}
 	}
 }

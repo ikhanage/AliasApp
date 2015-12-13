@@ -17,5 +17,7 @@ namespace Alia
 		public static Color WhiteTextColour = Color.White;
 
 		public static Color BlackTextColour = Color.Black;
+
+		public static Color Red = Color.Red;
 	}
 }

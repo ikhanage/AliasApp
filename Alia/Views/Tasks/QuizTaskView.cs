@@ -7,7 +7,7 @@ namespace Alia
 	{
 		readonly int Answer;
 		readonly int UnlockCode;
-		readonly Label ResponseText;
+		readonly TaskLabel ResponseText;
 
 		public QuizTaskView (QuizTaskTable quizTask) : base (quizTask)
 		{
