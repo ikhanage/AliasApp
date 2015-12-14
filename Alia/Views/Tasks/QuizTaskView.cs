@@ -27,10 +27,18 @@ namespace Alia
          	taskButton3.Clicked += AnswerTap;
          	taskButton4.Clicked += AnswerTap;
 
-			Children.Add (taskButton1);
-			Children.Add (taskButton2);
-			Children.Add (taskButton3);
-			Children.Add (taskButton4);
+			if(!string.IsNullOrWhiteSpace(taskButton1.Text))
+				Children.Add (taskButton1);
+			
+			if(!string.IsNullOrWhiteSpace(taskButton2.Text))
+				Children.Add (taskButton2);
+			
+			if(!string.IsNullOrWhiteSpace(taskButton3.Text))
+				Children.Add (taskButton3);
+			
+			if(!string.IsNullOrWhiteSpace(taskButton4.Text))
+				Children.Add (taskButton4);
+			
 			Children.Add (ResponseText);
 			Children.Add (AnswerLabel);
 		}
