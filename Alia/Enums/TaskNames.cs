@@ -2,8 +2,7 @@
 {
 	public enum TaskNames
 	{
-		TextTest,
-		NavTest,
-		QuizTest
+		OneYear,
+		TheHuntBegins,
 	}
 }
