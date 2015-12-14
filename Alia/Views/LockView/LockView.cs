@@ -8,19 +8,20 @@ namespace Alia
 		readonly int TaskId;
 		readonly int UnlockCode;
 		readonly IDatabaseHelper _db;
+		TaskNumberPicker AnswerEntry;
 
 		public LockView (int id, int unlockCode)
 		{
 			var kernel = new StandardKernel ();
 			_db = kernel.Get<DatabaseHelper> ();
 
-			var answerEntry = new TaskNumberPicker ();
-			answerEntry.TextChanged += AnswerEntered;
+			AnswerEntry = new TaskNumberPicker ();
+			AnswerEntry.TextChanged += AnswerEntered;
 
 			TaskId = id;
 			UnlockCode = unlockCode;
 
-			Children.Add (answerEntry);
+			Children.Add (AnswerEntry);
 		}
 
 		void AnswerEntered (object sender, TextChangedEventArgs e)
@@ -28,6 +29,7 @@ namespace Alia
 			if(UnlockCode.ToString() == e.NewTextValue)
 			{
 				_db.UpdateLockStatus (TaskId);
+				AnswerEntry.Unfocus ();
 				Navigation.PopModalAsync ();
 			}
 		}

@@ -136,6 +136,9 @@ namespace Alia
 
 			if (correctInput1 && correctInput2 && correctInput3) 
 			{
+				numberInput1.Unfocus ();
+				numberInput2.Unfocus ();
+				numberInput3.Unfocus ();
 				Navigation.PushModalAsync (new TasksPage());
 				return true;
 			}
