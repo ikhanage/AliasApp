@@ -50,7 +50,7 @@ namespace Alia
 
 			ResponseText.Text = task.ResponseText;
 
-			if (Answer == task.ButtonId) {
+			if (Answer == task.ButtonId || Answer == 0) {
 				AnswerLabel.Text = NextTaskUnlockCode;
 			}
 		}

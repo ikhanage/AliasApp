@@ -1,0 +1,23 @@
+﻿{
+	"Buttons":
+	[
+		{
+			"Text":"Oh yes please!  I am ready for delicousness.",
+			"Response":"You made a goose choice ;)"
+		},
+		{
+			"Text":"No.  I don't think I could handle that level of taste",
+			"Response":"Understandable.  You are not ready yet."
+		},
+		{
+			"Text":"",
+			"Response":""
+		},
+		{
+			"Text":"",
+			"Response":""
+		}
+	],
+	"Answer":"0",
+	"Question":"Roast goose?"
+}

@@ -31,6 +31,7 @@ namespace Alia
 			quizTasks.Add (new QuizTaskTable (3, TaskNames.WhatGoesUp, 102, 103));
 			quizTasks.Add (new QuizTaskTable (4, TaskNames.AVerySeriousQuestion, 103, 104));
 			quizTasks.Add (new QuizTaskTable (5, TaskNames.SoVeryStuck, 104, 105));
+			quizTasks.Add (new QuizTaskTable (6, TaskNames.YouLookGoose, 105, 106));
 			return quizTasks;
 		}
 	}

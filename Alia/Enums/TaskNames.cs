@@ -7,5 +7,6 @@
 		WhatGoesUp,
 		AVerySeriousQuestion,
 		SoVeryStuck,
+		YouLookGoose,
 	}
 }
