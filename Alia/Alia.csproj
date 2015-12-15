@@ -128,5 +128,7 @@
       <DeployService-Deploy>True</DeployService-Deploy>
       <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
     </EmbeddedResource>
+    <EmbeddedResource Include="TaskTextFiles\AVerySeriousQuestion.txt" />
+    <EmbeddedResource Include="TaskTextFiles\SoVeryStuck.txt" />
   </ItemGroup>
 </Project>

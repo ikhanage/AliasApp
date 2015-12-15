@@ -5,5 +5,7 @@
 		OneYear,
 		TheHuntBegins,
 		WhatGoesUp,
+		AVerySeriousQuestion,
+		SoVeryStuck,
 	}
 }

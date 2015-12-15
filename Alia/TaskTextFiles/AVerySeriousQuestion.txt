@@ -1,0 +1,23 @@
+﻿{
+	"Question":"Which of the following melons is the superior breed?",
+	"Buttons":
+	[
+		{
+			"Text":"Honeydew",
+			"Response":"Don't be silly."
+		},
+		{
+			"Text":"Cantaloupe",
+			"Response":"I'm not even sure I spelt that right!"
+		},
+		{
+			"Text":"Pink Lady",
+			"Response":"Pink lady?  That's not even a melon breed!"
+		},
+		{
+			"Text":"Watermelon",
+			"Response":"They got pumpkins on their heads. BUT I GOT WATERMELOOOOOONE INSTEAD!"
+		}
+	],
+	"Answer":"4"
+}
