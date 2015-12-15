@@ -52,18 +52,20 @@ namespace Alia
 		public string ResponseText4 { get; set; }
 		public int Answer  { get; set; }
 
-		public QuizTaskTable (int id, TaskNames taskName, int unlockCode, int nextTaskUnlockCode, string response1, string response2, string response3, string response4, string responseText1, string responseText2, string responseText3, string responseText4, int answer) : base (id, taskName, unlockCode, nextTaskUnlockCode)
+		public QuizTaskTable (int id, TaskNames taskName, int unlockCode, int nextTaskUnlockCode) : base (id, taskName, unlockCode, nextTaskUnlockCode)
 		{
 			Fk = id;
-			Response1 = response1;
-			Response2 = response2;
-			Response3 = response3;
-			Response4 = response4;
-			ResponseText1 = responseText1;
-			ResponseText2 = responseText2;
-			ResponseText3 = responseText3;
-			ResponseText4 = responseText4;
-			Answer = answer;
+			var button = GetText.GetQuizButtons (taskName);
+			Response1 = button.Buttons[0].Text;
+			Response2 = button.Buttons[1].Text;
+			Response3 = button.Buttons[2].Text;
+			Response4 = button.Buttons[3].Text;
+			ResponseText1 = button.Buttons[0].Response;
+			ResponseText2 = button.Buttons[1].Response;
+			ResponseText3 = button.Buttons[2].Response;
+			ResponseText4 = button.Buttons[3].Response;
+			Answer = int.Parse (button.Answer);
+			Text = button.Question;
 			PageType = PageTypes.QuizPage;
 		}
 

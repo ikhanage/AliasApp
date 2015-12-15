@@ -62,6 +62,7 @@
     <Compile Include="Controls\ButtonControls.cs" />
     <Compile Include="Controls\LabelControls.cs" />
     <Compile Include="Views\LockView\LockView.cs" />
+    <Compile Include="Helpers\QuizButtons.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -96,6 +97,9 @@
     <Reference Include="SQLitePCL.raw">
       <HintPath>..\packages\SQLitePCL.raw_basic.0.8.4\lib\portable-net45+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCL.raw.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -118,11 +122,11 @@
     <Folder Include="Views\LockView\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="TaskTextFiles\TextTest.txt">
+    <EmbeddedResource Include="TaskTextFiles\OneYear.txt" />
+    <EmbeddedResource Include="TaskTextFiles\TheHuntBegins.txt" />
+    <EmbeddedResource Include="TaskTextFiles\WhatGoesUp.txt">
       <DeployService-Deploy>True</DeployService-Deploy>
       <DeployService-UseProjectRelativePath>True</DeployService-UseProjectRelativePath>
     </EmbeddedResource>
-    <EmbeddedResource Include="TaskTextFiles\OneYear.txt" />
-    <EmbeddedResource Include="TaskTextFiles\TheHuntBegins.txt" />
   </ItemGroup>
 </Project>

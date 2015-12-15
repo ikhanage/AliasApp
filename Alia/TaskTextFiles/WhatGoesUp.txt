@@ -1,0 +1,23 @@
+﻿{
+	"Buttons":
+	[
+		{
+			"Text":"A 3 Bean Salad",
+			"Response":"3 beans don't hit the critical mass to achieve perpetual up-ness."
+		},
+		{
+			"Text":"German Economic Performace",
+			"Response":"Germany is only safe in Merkel's hands and she can't last forever."
+		},
+		{
+			"Text":"Age",
+			"Response":"As if."
+		},
+		{
+			"Text":"A Firework",
+			"Response":":D"
+		}
+	],
+	"Answer":"4",
+	"Question":"What goes up but never comes down?"
+}

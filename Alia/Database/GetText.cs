@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
-using Xamarin.Forms;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace Alia
 {
@@ -12,14 +12,9 @@ namespace Alia
 			return GetTextFile (textPage.ToString ());
 		}
 
-		public static string GetQuizPageText (PageTypes quizPage)
+		public static QuizButtons GetQuizButtons (TaskNames textPage)
 		{
-			throw new NotImplementedException ();
-		}
-
-		public static string GetNavPageText (PageTypes navPage)
-		{
-			throw new NotImplementedException ();
+			return JsonConvert.DeserializeObject<QuizButtons> (GetTextFile (textPage.ToString ()));
 		}
 
 		static string GetTextFile (string fileName)

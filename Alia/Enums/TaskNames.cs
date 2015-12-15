@@ -4,5 +4,6 @@
 	{
 		OneYear,
 		TheHuntBegins,
+		WhatGoesUp,
 	}
 }
