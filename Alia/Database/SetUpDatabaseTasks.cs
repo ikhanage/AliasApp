@@ -14,6 +14,7 @@ namespace Alia
 			textTasks.Add (taskTask);
 			textTasks.Add (new TextTaskTable (2, TaskNames.TheHuntBegins, 101, 102));
 			textTasks.Add (new TextTaskTable (7, TaskNames.ImmysLament, 106, 107));
+			textTasks.Add (new TextTaskTable (8, TaskNames.AShortMessage, 107, 106));
 			return textTasks;
 		}
 
