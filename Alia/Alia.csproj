@@ -131,5 +131,6 @@
     <EmbeddedResource Include="TaskTextFiles\AVerySeriousQuestion.txt" />
     <EmbeddedResource Include="TaskTextFiles\SoVeryStuck.txt" />
     <EmbeddedResource Include="TaskTextFiles\YouLookGoose.txt" />
+    <EmbeddedResource Include="TaskTextFiles\ImmysLament.txt" />
   </ItemGroup>
 </Project>
