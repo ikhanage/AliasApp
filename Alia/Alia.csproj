@@ -133,5 +133,6 @@
     <EmbeddedResource Include="TaskTextFiles\YouLookGoose.txt" />
     <EmbeddedResource Include="TaskTextFiles\ImmysLament.txt" />
     <EmbeddedResource Include="TaskTextFiles\AShortMessage.txt" />
+    <EmbeddedResource Include="TaskTextFiles\InitialPlan.txt" />
   </ItemGroup>
 </Project>
