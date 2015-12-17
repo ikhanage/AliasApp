@@ -43,14 +43,9 @@ namespace Alia
 
 		static Color GetTaskColour (bool nextTaskLocked, bool locked)
 		{
-			var taskColour = ColourSettings.LockedTask;
-			if (!nextTaskLocked) {
-				taskColour = ColourSettings.CompletedTask;
-			}
-			else if (!locked) {
-				taskColour = ColourSettings.UnlockedTask;
-			}
-			return taskColour;
+			if (locked) return ColourSettings.LockedTask;
+			if (!nextTaskLocked) return ColourSettings.CompletedTask;
+			return ColourSettings.UnlockedTask;
 		}
 	}
 }
