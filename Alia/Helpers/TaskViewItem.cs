@@ -6,7 +6,7 @@ namespace Alia
 	{
 		public int Id;
 
-		public TaskViewItem(TextTaskTable item)
+		public TaskViewItem(TextTaskTable item, bool nextTaskLocked)
 		{
 			Id = item.Id;
 			Padding = new Thickness (0, 0, 0, 0);
@@ -22,7 +22,7 @@ namespace Alia
 
 			Children.Add (
 				new Label {
-					BackgroundColor = GetTaskColour (item.Completed, item.Locked)
+					BackgroundColor = GetTaskColour (nextTaskLocked, item.Locked)
 				},
 				0, 1, 0, 2
 			);
@@ -41,10 +41,10 @@ namespace Alia
 			);
 		}
 
-		static Color GetTaskColour (bool completed, bool locked)
+		static Color GetTaskColour (bool nextTaskLocked, bool locked)
 		{
 			var taskColour = ColourSettings.LockedTask;
-			if (completed) {
+			if (!nextTaskLocked) {
 				taskColour = ColourSettings.CompletedTask;
 			}
 			else if (!locked) {

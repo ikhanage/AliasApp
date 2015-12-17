@@ -28,13 +28,14 @@ namespace Alia
 			var layout = new StackLayout ();
 			layout.Padding = AppSettings.LayoutPadding;
 
-			var items = _db.GetTasks ();
+			var items = _db.GetTasks ().ToArray();
 			var gesture = new TapGestureRecognizer();
 
 			gesture.Tapped += TaskTap;
 
-			foreach (var item in items) {
-				var taskViewItem = new TaskViewItem (item);
+			for (var i = 0; i < items.Length - 1; i++) {
+				var nextTaskLocked = i == items.Length || items [i + 1].Locked;
+				var taskViewItem = new TaskViewItem (items [i], nextTaskLocked);
 				taskViewItem.GestureRecognizers.Add (gesture);
 				layout.Children.Add (taskViewItem);
 			}
