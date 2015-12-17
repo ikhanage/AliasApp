@@ -8,10 +8,7 @@ namespace Alia
 		{
 			var textTasks = new List<TextTaskTable> ();
 
-			var taskTask = new TextTaskTable (1, TaskNames.OneYear, 000, 101);
-			taskTask.Locked = false;
-
-			textTasks.Add (taskTask);
+			textTasks.Add (new TextTaskTable (1, TaskNames.OneYear, 000, 101){ Locked = false });
 			textTasks.Add (new TextTaskTable (2, TaskNames.TheHuntBegins, 101, 102));
 			textTasks.Add (new QuizTaskTable (3, TaskNames.WhatGoesUp, 102, 103));
 			textTasks.Add (new QuizTaskTable (4, TaskNames.AVerySeriousQuestion, 103, 104));
@@ -20,15 +17,9 @@ namespace Alia
 			textTasks.Add (new TextTaskTable (7, TaskNames.ImmysLament, 106, 107));
 			textTasks.Add (new TextTaskTable (8, TaskNames.AShortMessage, 107, 108));
 			textTasks.Add (new TextTaskTable (9, TaskNames.InitialPlan, 108, 109));
+			textTasks.Add (new NavTaskTable (10, TaskNames.Luncheon, 109, 201, 321));
+
 			return textTasks;
-		}
-
-		public static List<NavTaskTable> SetUpNavTasks()
-		{
-			var navTasks = new List<NavTaskTable> ();
-
-			//navTasks.Add (new NavTaskTable(3, TaskNames.TextTest, 003, 004, 321));
-			return navTasks;
 		}
 	}
 }
