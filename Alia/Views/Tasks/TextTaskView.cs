@@ -1,5 +1,6 @@
 ﻿using Xamarin.Forms;
 using System;
+using Ninject;
 
 namespace Alia
 {
@@ -7,14 +8,25 @@ namespace Alia
 	{
 		protected readonly AnswerLabel AnswerLabel;
 		protected readonly string NextTaskUnlockCode;
+		protected readonly Button AnswerAndReturnButton;
+		protected readonly IDatabaseHelper _db;
+		private readonly int taskId;
 
 		public TextTaskView (TextTaskTable textTask)
 		{
+			var kernel = new StandardKernel();
+			_db = kernel.Get<DatabaseHelper> ();
+
 			Padding = AppSettings.TaskPadding;
 
 			AnswerLabel = new AnswerLabel ();
 			AnswerLabel.Text = textTask.NextTaskUnlockCode.ToString ();
 			NextTaskUnlockCode = textTask.NextTaskUnlockCode.ToString ();
+
+			AnswerAndReturnButton = new Button{	Text = "Unlock Next Task" };
+			AnswerAndReturnButton.Clicked += AnswerAndReturnButton_Clicked;
+
+			taskId = textTask.Id;
 
 			var gesture = new TapGestureRecognizer();
 
@@ -40,8 +52,15 @@ namespace Alia
 				}
 			);
 
-
 			Children.Add (AnswerLabel);
+			Children.Add (AnswerAndReturnButton);
+		}
+
+		void AnswerAndReturnButton_Clicked (object sender, EventArgs e)
+		{
+			_db.UpdateLockStatus (taskId + 1);
+			MessagingCenter.Send (this, "TaskUpdate");
+			Navigation.PopModalAsync ();
 		}
 
 		void BackTap(object sender, EventArgs e)

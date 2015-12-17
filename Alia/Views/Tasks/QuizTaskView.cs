@@ -6,14 +6,13 @@ namespace Alia
 	public class QuizTaskView : TextTaskView
 	{
 		readonly int Answer;
-		readonly int UnlockCode;
 		readonly TaskLabel ResponseText;
 
 		public QuizTaskView (QuizTaskTable quizTask) : base (quizTask)
 		{
 			Answer = quizTask.Answer;
-			UnlockCode = quizTask.UnlockCode;
 			AnswerLabel.Text = string.Empty;
+			AnswerAndReturnButton.IsVisible = false;
 
 			ResponseText = new TaskLabel ();
 
@@ -52,6 +51,7 @@ namespace Alia
 
 			if (Answer == task.ButtonId || Answer == 0) {
 				AnswerLabel.Text = NextTaskUnlockCode;
+				AnswerAndReturnButton.IsVisible = true;
 			}
 		}
 	}

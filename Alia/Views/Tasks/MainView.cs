@@ -14,6 +14,7 @@ namespace Alia
 			var kernel = new StandardKernel();
 			_db = kernel.Get<DatabaseHelper> ();
 			MessagingCenter.Subscribe<LockView> (this, "TaskUpdate", RefreshPage);
+			MessagingCenter.Subscribe<TextTaskView> (this, "TaskUpdate", RefreshPage);
 			Content = TasksLayout ();
 		}
 

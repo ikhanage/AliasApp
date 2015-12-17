@@ -5,7 +5,6 @@ namespace Alia
 	public class NavTaskView : TextTaskView
 	{
 		readonly int CodeToUnlock;
-		readonly int UnlockCode;
 
 		public NavTaskView (NavTaskTable navTask) : base (navTask)
 		{
@@ -13,16 +12,18 @@ namespace Alia
 			answerEntry.TextChanged += AnswerEntryChanged;
 
 			CodeToUnlock = navTask.CodeToComplete;
-			UnlockCode = navTask.UnlockCode;
 			AnswerLabel.Text = string.Empty;
+			AnswerAndReturnButton.IsVisible = false;
 
 			Children.Add (answerEntry);
 		}
 
 		void AnswerEntryChanged(object sender, TextChangedEventArgs e)
 		{
-			if (e.NewTextValue == CodeToUnlock.ToString())
+			if (e.NewTextValue == CodeToUnlock.ToString ()) {
 				AnswerLabel.Text = NextTaskUnlockCode;
+				AnswerAndReturnButton.IsVisible = true;
+			}
 
 			if (e.NewTextValue.Length > 3) 
 				((Entry)sender).Text = string.Empty;
