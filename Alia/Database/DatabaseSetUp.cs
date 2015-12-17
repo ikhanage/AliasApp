@@ -32,9 +32,7 @@ namespace Alia
 			if (db.Table<TextTaskTable> ().Any ())
 				return;
 			
-			db.InsertAll (SetUpDatabaseTasks.SetUpNavTasks ());
 			db.InsertAll (SetUpDatabaseTasks.SetUpTextTask ());
-			db.InsertAll (SetUpDatabaseTasks.SetUpQuizTasks ());
 		}
 	}
 }

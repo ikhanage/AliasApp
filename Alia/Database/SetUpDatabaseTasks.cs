@@ -13,8 +13,13 @@ namespace Alia
 
 			textTasks.Add (taskTask);
 			textTasks.Add (new TextTaskTable (2, TaskNames.TheHuntBegins, 101, 102));
+			textTasks.Add (new QuizTaskTable (3, TaskNames.WhatGoesUp, 102, 103));
+			textTasks.Add (new QuizTaskTable (4, TaskNames.AVerySeriousQuestion, 103, 104));
+         	textTasks.Add (new QuizTaskTable (5, TaskNames.SoVeryStuck, 104, 105));
+         	textTasks.Add (new QuizTaskTable (6, TaskNames.YouLookGoose, 105, 106));
 			textTasks.Add (new TextTaskTable (7, TaskNames.ImmysLament, 106, 107));
-			textTasks.Add (new TextTaskTable (8, TaskNames.AShortMessage, 107, 106));
+			textTasks.Add (new TextTaskTable (8, TaskNames.AShortMessage, 107, 108));
+			textTasks.Add (new TextTaskTable (9, TaskNames.InitialPlan, 108, 109));
 			return textTasks;
 		}
 
@@ -24,17 +29,6 @@ namespace Alia
 
 			//navTasks.Add (new NavTaskTable(3, TaskNames.TextTest, 003, 004, 321));
 			return navTasks;
-		}
-
-		public static List<QuizTaskTable> SetUpQuizTasks()
-		{
-			var quizTasks = new List<QuizTaskTable> ();
-
-			quizTasks.Add (new QuizTaskTable (3, TaskNames.WhatGoesUp, 102, 103));
-			quizTasks.Add (new QuizTaskTable (4, TaskNames.AVerySeriousQuestion, 103, 104));
-			quizTasks.Add (new QuizTaskTable (5, TaskNames.SoVeryStuck, 104, 105));
-			quizTasks.Add (new QuizTaskTable (6, TaskNames.YouLookGoose, 105, 106));
-			return quizTasks;
 		}
 	}
 }
