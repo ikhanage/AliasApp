@@ -13,6 +13,12 @@ namespace Alia
 		{
 			var kernel = new StandardKernel();
 			_db = kernel.Get<DatabaseHelper> ();
+			MessagingCenter.Subscribe<LockView> (this, "TaskUpdate", RefreshPage);
+			Content = TasksLayout ();
+		}
+
+		void RefreshPage(Object sender) 
+		{
 			Content = TasksLayout ();
 		}
 
@@ -24,10 +30,6 @@ namespace Alia
 			var items = _db.GetTasks ();
 			var gesture = new TapGestureRecognizer();
 
-			var refreshButton = new TaskButtons ("Refresh", string.Empty, 0);
-			refreshButton.Clicked += RefreshButton_Clicked;
-			layout.Children.Add (refreshButton);
-
 			gesture.Tapped += TaskTap;
 
 			foreach (var item in items) {
@@ -37,12 +39,6 @@ namespace Alia
 			}
 
 			return layout;
-		}
-
-		void RefreshButton_Clicked (object sender, EventArgs e)
-		{
-			//TODO: Replace with pull to refresh list?
-			Content = TasksLayout ();
 		}
 
 		void TaskTap(object sender, EventArgs e)

@@ -30,6 +30,7 @@ namespace Alia
 			{
 				_db.UpdateLockStatus (TaskId);
 				AnswerEntry.Unfocus ();
+				MessagingCenter.Send (this, "TaskUpdate");
 				Navigation.PopModalAsync ();
 			}
 		}
