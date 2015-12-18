@@ -1,7 +1,7 @@
 ﻿{
 	"Question":"This is a competition to see who wins and who loses.  I have 2 Kinder Eggs.  One for you and one for me.  I shall unwrap my glorious egg and reveal the prize inside.  Then you shall do the same.  Whoever has the better Kinder prize wins.
 
-So, who wins?"
+So, who wins?",
 	"Buttons":
 	[
 		{
@@ -13,7 +13,7 @@ So, who wins?"
 			"Response":"I had a feeling you'd win."
 		},
 		{
-			“Text”:””
+			"Text":"",
 			"Response":""
 		},
 		{

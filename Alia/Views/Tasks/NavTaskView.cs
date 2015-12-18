@@ -24,9 +24,6 @@ namespace Alia
 				AnswerLabel.Text = NextTaskUnlockCode;
 				AnswerAndReturnButton.IsVisible = true;
 			}
-
-			if (e.NewTextValue.Length > 3) 
-				((Entry)sender).Text = string.Empty;
 		}
 	}
 }

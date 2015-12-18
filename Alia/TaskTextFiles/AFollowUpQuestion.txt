@@ -1,5 +1,5 @@
 ﻿{
-	"Question":"So what do you say?  Will you marry me?"
+	"Question":"So what do you say?  Will you marry me?",
 	"Buttons":
 	[
 		{
