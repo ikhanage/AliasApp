@@ -136,5 +136,7 @@
     <EmbeddedResource Include="TaskTextFiles\AShortMessage.txt" />
     <EmbeddedResource Include="TaskTextFiles\InitialPlan.txt" />
     <EmbeddedResource Include="TaskTextFiles\Luncheon.txt" />
+    <EmbeddedResource Include="TaskTextFiles\AKinderQuestion.txt" />
+    <EmbeddedResource Include="TaskTextFiles\AFollowUpQuestion.txt" />
   </ItemGroup>
 </Project>

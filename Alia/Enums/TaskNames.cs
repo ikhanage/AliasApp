@@ -11,6 +11,8 @@
 		ImmysLament,
 		AShortMessage,
 		InitialPlan,
-		Luncheon
+		Luncheon,
+		AKinderQuestion,
+		AFollowUpQuestion
 	}
 }
