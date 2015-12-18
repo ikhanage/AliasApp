@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Alia
 {
-	public class MainView : ScrollView
+	public class MainView : ContentView
 	{
 		readonly IDatabaseHelper _db;
 
@@ -31,9 +31,10 @@ namespace Alia
 
 			listView.ItemTemplate = new DataTemplate (typeof(TaskListTemplate));
 			layout.Padding = AppSettings.LayoutPadding;
+			layout.Spacing = 10;
 
 			var items = _db.GetTasks ().ToArray();
-			var gesture = new TapGestureRecognizer();
+			//var gesture = new TapGestureRecognizer();
 
 			//gesture.Tapped += TaskTap;
 
@@ -45,7 +46,7 @@ namespace Alia
 				//layout.Children.Add (taskViewItem);
 				listSource.Add (taskViewItem);
 			}
-
+				
 			listView.ItemTapped += ListView_ItemTapped;;
 			listView.ItemsSource = listSource;
 			layout.Children.Add (listView);
@@ -59,10 +60,10 @@ namespace Alia
 			Navigation.PushModalAsync (new TaskPage(viewItem.Id));
 		}
 
-		void TaskTap(object sender, SelectedItemChangedEventArgs e)
+		/*void TaskTap(object sender, SelectedItemChangedEventArgs e)
 		{
 			var viewItem = (TaskViewItem)sender;
 			Navigation.PushModalAsync (new TaskPage(viewItem.Id));
-		}
+		}*/
 	}
 }

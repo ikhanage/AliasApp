@@ -16,4 +16,13 @@ namespace Alia
 			ResponseText = responseText;
 		}
 	}
+
+	public class AnswerButton : Button
+	{
+		public AnswerButton()
+		{
+			BackgroundColor = ColourSettings.WhiteTextColour;
+			TextColor = ColourSettings.BlackTextColour;
+		}
+	}
 }

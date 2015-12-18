@@ -1,7 +1,4 @@
 using Xamarin.Forms;
-using Ninject;
-using System;
-using System.Collections.Generic;
 
 namespace Alia
 {

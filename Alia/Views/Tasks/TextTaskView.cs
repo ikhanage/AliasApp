@@ -8,7 +8,7 @@ namespace Alia
 	{
 		protected readonly AnswerLabel AnswerLabel;
 		protected readonly string NextTaskUnlockCode;
-		protected readonly Button AnswerAndReturnButton;
+		protected readonly AnswerButton AnswerAndReturnButton;
 		protected readonly IDatabaseHelper _db;
 		private readonly int taskId;
 
@@ -23,7 +23,7 @@ namespace Alia
 			AnswerLabel.Text = textTask.NextTaskUnlockCode.ToString ();
 			NextTaskUnlockCode = textTask.NextTaskUnlockCode.ToString ();
 
-			AnswerAndReturnButton = new Button{	Text = "Unlock Next Task" };
+			AnswerAndReturnButton = new AnswerButton{	Text = "Unlock Next Task" };
 			AnswerAndReturnButton.Clicked += AnswerAndReturnButton_Clicked;
 
 			taskId = textTask.Id;
