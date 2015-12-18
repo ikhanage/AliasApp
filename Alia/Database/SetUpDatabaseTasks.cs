@@ -17,7 +17,7 @@ namespace Alia
 			textTasks.Add (new TextTaskTable (7, TaskNames.ImmysLament, 106, 107));
 			textTasks.Add (new TextTaskTable (8, TaskNames.AShortMessage, 107, 108));
 			textTasks.Add (new NavTaskTable (9, TaskNames.Luncheon, 108, 109, 321));
-			textTasks.Add (new TextTaskTable (10, TaskNames.InitialPlan, 102, 201));
+			textTasks.Add (new TextTaskTable (10, TaskNames.InitialPlan, 109, 201));
 
 			return textTasks;
 		}

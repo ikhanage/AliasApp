@@ -10,6 +10,7 @@
 		YouLookGoose,
 		ImmysLament,
 		AShortMessage,
-		InitialPlan
+		InitialPlan,
+		Luncheon
 	}
 }
