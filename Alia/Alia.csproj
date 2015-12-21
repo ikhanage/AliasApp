@@ -138,5 +138,6 @@
     <EmbeddedResource Include="TaskTextFiles\Luncheon.txt" />
     <EmbeddedResource Include="TaskTextFiles\AKinderQuestion.txt" />
     <EmbeddedResource Include="TaskTextFiles\AFollowUpQuestion.txt" />
+    <EmbeddedResource Include="TaskTextFiles\ChildOfJuly.txt" />
   </ItemGroup>
 </Project>

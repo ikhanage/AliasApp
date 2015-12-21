@@ -13,6 +13,7 @@
 		InitialPlan,
 		Luncheon,
 		AKinderQuestion,
-		AFollowUpQuestion
+		AFollowUpQuestion,
+		ChildOfJuly
 	}
 }
