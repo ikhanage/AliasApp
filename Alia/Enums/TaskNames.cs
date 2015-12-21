@@ -14,6 +14,7 @@
 		Luncheon,
 		AKinderQuestion,
 		AFollowUpQuestion,
-		ChildOfJuly
+		ChildOfJuly,
+		ImmyQuiz
 	}
 }

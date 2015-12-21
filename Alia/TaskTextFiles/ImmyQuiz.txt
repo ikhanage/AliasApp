@@ -1,0 +1,23 @@
+﻿{
+	"Question":"How well do you know your Immy? Which of these is not something I would say?",
+	"Buttons":
+	[
+		{
+			"Text":"Goat instead Go",
+			"Response":"Well you gave it a goat at least!"
+		},
+		{
+			"Text":"Anywhale instead of Anyway",
+			"Response":"Anywhale the wind blows."
+		},
+		{
+			"Text":"Cabbage Soup instead of Musical Group",
+			"Response":"Correct. Way to goat!"
+		},
+		{
+			"Text":"Chicken instead of Checking",
+			"Response":"You're just chicken what this response is right?"
+		}
+	],
+	"Answer":"3"
+}
