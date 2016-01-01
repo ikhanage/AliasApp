@@ -31,7 +31,6 @@ namespace Alia
 
 			listView.ItemTemplate = new DataTemplate (typeof(TaskListTemplate));
 			layout.Padding = AppSettings.LayoutPadding;
-			layout.Spacing = 10;
 
 			var items = _db.GetTasks ().ToArray();
 			//var gesture = new TapGestureRecognizer();
@@ -47,9 +46,17 @@ namespace Alia
 				listSource.Add (taskViewItem);
 			}
 				
-			listView.ItemTapped += ListView_ItemTapped;;
+			listView.ItemTapped += ListView_ItemTapped;
 			listView.ItemsSource = listSource;
 			layout.Children.Add (listView);
+
+			//var nativeListView = new NativeListView {
+			//	Items = listSource,
+			//	VerticalOptions = LayoutOptions.FillAndExpand
+			//};
+
+			//nativeListView.ItemTapped += ListView_ItemTapped;
+			//layout.Children.Add (nativeListView);
 			
 			return layout;
 		}
@@ -59,11 +66,5 @@ namespace Alia
 			var viewItem = (TaskViewItem)e.Item;
 			Navigation.PushModalAsync (new TaskPage(viewItem.Id));
 		}
-
-		/*void TaskTap(object sender, SelectedItemChangedEventArgs e)
-		{
-			var viewItem = (TaskViewItem)sender;
-			Navigation.PushModalAsync (new TaskPage(viewItem.Id));
-		}*/
 	}
 }

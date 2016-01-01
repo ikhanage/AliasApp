@@ -121,9 +121,9 @@ namespace Alia
 
 		void SetIntoText(){
 			if (IsPartyTime)
-				IntroText = "It's party time!";
+				IntroText = "It's been a year!";
 			else
-				IntroText = "Until Alia's birthday";
+				IntroText = "Until it's been a year";
 
 		}
 

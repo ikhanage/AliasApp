@@ -4,12 +4,15 @@ namespace Alia
 {
 	public class TaskListTemplate : ViewCell
 	{
+		Label Status;
+		Label Title;
+		Grid grid;
 		public TaskListTemplate()
 		{
-			var grid = new Grid();
-			var status = new Label ();
+			grid = new Grid();
+			Status = new Label ();
 
-			var title = new Label {
+			Title = new Label {
 				BackgroundColor = ColourSettings.WhiteTextColour,
 				TextColor = ColourSettings.BlackTextColour,
 				HorizontalTextAlignment = TextAlignment.Center,
@@ -17,8 +20,8 @@ namespace Alia
 				FontSize = AppSettings.LargeFontSize
 			};
 
-			title.SetBinding (Label.TextProperty, "Title");
-			status.SetBinding (VisualElement.BackgroundColorProperty, "StatusColour");
+			Title.SetBinding (Label.TextProperty, "Title");
+			Status.SetBinding (VisualElement.BackgroundColorProperty, "StatusColour");
 
 			grid.Padding = new Thickness (0, 0, 0, 0);
 			grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (50, GridUnitType.Absolute) });
@@ -32,12 +35,12 @@ namespace Alia
 			grid.BackgroundColor = ColourSettings.TaskBackground;	
 
 			grid.Children.Add (
-				status,
+				Status,
 				0, 1, 0, 2
 			);
 
 			grid.Children.Add (
-				title,
+				Title,
 				1, 2, 0, 1 //column, col span, row, row span
 			);
 

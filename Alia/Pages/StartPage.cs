@@ -150,7 +150,7 @@ namespace Alia
 		{
 			return new Label 
 			{ 
-				Text = "Alia's birthday in",
+				Text = "It'll be a year in",
 				VerticalOptions = LayoutOptions.EndAndExpand,
 				HorizontalOptions = LayoutOptions.CenterAndExpand
 			};

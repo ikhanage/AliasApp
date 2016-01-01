@@ -3334,8 +3334,17 @@ namespace Alia.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f090075
+			public const int Status = 2131296373;
+			
 			// aapt resource value: 0x7f090074
-			public const int action0 = 2131296372;
+			public const int Text = 2131296372;
+			
+			// aapt resource value: 0x7f090076
+			public const int Title = 2131296374;
+			
+			// aapt resource value: 0x7f090077
+			public const int action0 = 2131296375;
 			
 			// aapt resource value: 0x7f090055
 			public const int action_bar = 2131296341;
@@ -3361,8 +3370,8 @@ namespace Alia.Droid
 			// aapt resource value: 0x7f090056
 			public const int action_context_bar = 2131296342;
 			
-			// aapt resource value: 0x7f090078
-			public const int action_divider = 2131296376;
+			// aapt resource value: 0x7f09007b
+			public const int action_divider = 2131296379;
 			
 			// aapt resource value: 0x7f090003
 			public const int action_menu_divider = 2131296259;
@@ -3403,8 +3412,8 @@ namespace Alia.Droid
 			// aapt resource value: 0x7f090071
 			public const int buttons = 2131296369;
 			
-			// aapt resource value: 0x7f090075
-			public const int cancel_action = 2131296373;
+			// aapt resource value: 0x7f090078
+			public const int cancel_action = 2131296376;
 			
 			// aapt resource value: 0x7f090012
 			public const int center = 2131296274;
@@ -3418,8 +3427,8 @@ namespace Alia.Droid
 			// aapt resource value: 0x7f09004d
 			public const int checkbox = 2131296333;
 			
-			// aapt resource value: 0x7f09007b
-			public const int chronometer = 2131296379;
+			// aapt resource value: 0x7f09007e
+			public const int chronometer = 2131296382;
 			
 			// aapt resource value: 0x7f09001b
 			public const int clip_horizontal = 2131296283;
@@ -3460,8 +3469,8 @@ namespace Alia.Droid
 			// aapt resource value: 0x7f090015
 			public const int end = 2131296277;
 			
-			// aapt resource value: 0x7f090080
-			public const int end_padder = 2131296384;
+			// aapt resource value: 0x7f090083
+			public const int end_padder = 2131296387;
 			
 			// aapt resource value: 0x7f09000a
 			public const int enterAlways = 2131296266;
@@ -3505,17 +3514,17 @@ namespace Alia.Droid
 			// aapt resource value: 0x7f09003d
 			public const int image = 2131296317;
 			
-			// aapt resource value: 0x7f09007f
-			public const int info = 2131296383;
+			// aapt resource value: 0x7f090082
+			public const int info = 2131296386;
 			
 			// aapt resource value: 0x7f090017
 			public const int left = 2131296279;
 			
-			// aapt resource value: 0x7f090079
-			public const int line1 = 2131296377;
+			// aapt resource value: 0x7f09007c
+			public const int line1 = 2131296380;
 			
-			// aapt resource value: 0x7f09007d
-			public const int line3 = 2131296381;
+			// aapt resource value: 0x7f090080
+			public const int line3 = 2131296384;
 			
 			// aapt resource value: 0x7f090023
 			public const int listMode = 2131296291;
@@ -3523,8 +3532,8 @@ namespace Alia.Droid
 			// aapt resource value: 0x7f09003f
 			public const int list_item = 2131296319;
 			
-			// aapt resource value: 0x7f090077
-			public const int media_actions = 2131296375;
+			// aapt resource value: 0x7f09007a
+			public const int media_actions = 2131296378;
 			
 			// aapt resource value: 0x7f09006a
 			public const int media_route_control_frame = 2131296362;
@@ -3664,8 +3673,8 @@ namespace Alia.Droid
 			// aapt resource value: 0x7f090019
 			public const int start = 2131296281;
 			
-			// aapt resource value: 0x7f090076
-			public const int status_bar_latest_event_content = 2131296374;
+			// aapt resource value: 0x7f090079
+			public const int status_bar_latest_event_content = 2131296377;
 			
 			// aapt resource value: 0x7f090073
 			public const int stop = 2131296371;
@@ -3679,17 +3688,17 @@ namespace Alia.Droid
 			// aapt resource value: 0x7f090024
 			public const int tabMode = 2131296292;
 			
-			// aapt resource value: 0x7f09007e
-			public const int text = 2131296382;
+			// aapt resource value: 0x7f090081
+			public const int text = 2131296385;
 			
-			// aapt resource value: 0x7f09007c
-			public const int text2 = 2131296380;
+			// aapt resource value: 0x7f09007f
+			public const int text2 = 2131296383;
 			
 			// aapt resource value: 0x7f090048
 			public const int textSpacerNoButtons = 2131296328;
 			
-			// aapt resource value: 0x7f09007a
-			public const int time = 2131296378;
+			// aapt resource value: 0x7f09007d
+			public const int time = 2131296381;
 			
 			// aapt resource value: 0x7f090041
 			public const int title = 2131296321;
@@ -3874,40 +3883,43 @@ namespace Alia.Droid
 			public const int mr_media_route_list_item = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int notification_media_action = 2130903076;
+			public const int NativeAndroidListViewCell = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int notification_media_cancel_action = 2130903077;
+			public const int notification_media_action = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int notification_template_big_media = 2130903078;
+			public const int notification_media_cancel_action = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int notification_template_big_media_narrow = 2130903079;
+			public const int notification_template_big_media = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int notification_template_lines = 2130903080;
+			public const int notification_template_big_media_narrow = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int notification_template_media = 2130903081;
+			public const int notification_template_lines = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int notification_template_part_chronometer = 2130903082;
+			public const int notification_template_media = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int notification_template_part_time = 2130903083;
+			public const int notification_template_part_chronometer = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int select_dialog_item_material = 2130903084;
+			public const int notification_template_part_time = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int select_dialog_multichoice_material = 2130903085;
+			public const int select_dialog_item_material = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int select_dialog_singlechoice_material = 2130903086;
+			public const int select_dialog_multichoice_material = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int support_simple_spinner_dropdown_item = 2130903087;
+			public const int select_dialog_singlechoice_material = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int support_simple_spinner_dropdown_item = 2130903088;
 			
 			static Layout()
 			{

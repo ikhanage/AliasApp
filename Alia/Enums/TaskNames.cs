@@ -15,6 +15,7 @@
 		AKinderQuestion,
 		AFollowUpQuestion,
 		ChildOfJuly,
+		HowMuchILoveYou,
 		ImmyQuiz
 	}
 }

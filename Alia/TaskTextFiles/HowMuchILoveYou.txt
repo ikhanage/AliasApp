@@ -1,0 +1,23 @@
+﻿{
+	"Question":"I love you like a...",
+	"Buttons":
+	[
+		{
+			"Text":"Ripe orange",
+			"Response":"There's so much love I'm bursting with sugar and juice!"
+		},
+		{
+			"Text":"Clucking chicken",
+			"Response":"I do love a clucking chicken but I prefer a frying chicken more."
+		},
+		{
+			"Text":"Hurricance",
+			"Response":"I think this is a song lyric I heard once."
+		},
+		{
+			"Text":"Fresh pair of socks",
+			"Response":"One can't deny the pleasure of a fresh pair of socks but I love you more than my finest pair"
+		}
+	],
+	"Answer":"1"
+}
