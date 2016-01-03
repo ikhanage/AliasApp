@@ -33,30 +33,16 @@ namespace Alia
 			layout.Padding = AppSettings.LayoutPadding;
 
 			var items = _db.GetTasks ().ToArray();
-			//var gesture = new TapGestureRecognizer();
-
-			//gesture.Tapped += TaskTap;
 
 			for (var i = 0; i < items.Length; i++) {
 				var nextTaskLocked = i + 1 == items.Length || items [i + 1].Locked;
 				var taskViewItem = new TaskViewItem (items [i], nextTaskLocked);
-				//taskViewItem.GestureRecognizers.Add (gesture);
-
-				//layout.Children.Add (taskViewItem);
 				listSource.Add (taskViewItem);
 			}
 				
 			listView.ItemTapped += ListView_ItemTapped;
 			listView.ItemsSource = listSource;
 			layout.Children.Add (listView);
-
-			//var nativeListView = new NativeListView {
-			//	Items = listSource,
-			//	VerticalOptions = LayoutOptions.FillAndExpand
-			//};
-
-			//nativeListView.ItemTapped += ListView_ItemTapped;
-			//layout.Children.Add (nativeListView);
 			
 			return layout;
 		}
