@@ -24,7 +24,10 @@ namespace Alia
 				task = db.Table<QuizTaskTable> ().SingleOrDefault (x => x.Id == id);
 
 			if(task == null)
-				task = db.Table<NavTaskTable> ().Single (x => x.Id == id);
+				task = db.Table<NavTaskTable> ().SingleOrDefault (x => x.Id == id);
+
+			if (task == null)
+				return;
 			
 			task.Locked = locked;
 
