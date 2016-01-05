@@ -16,6 +16,7 @@
 		AFollowUpQuestion,
 		ChildOfJuly,
 		HowMuchILoveYou,
-		ImmyQuiz
+		ImmyQuiz,
+		TheEnd
 	}
 }

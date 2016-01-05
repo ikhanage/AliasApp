@@ -107,6 +107,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Alia.csproj" />
+    <None Include="TaskTextFiles\TheEnd.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
