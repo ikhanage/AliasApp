@@ -1,0 +1,29 @@
+{
+	"Question":"So the day ends,
+	As we change our life,
+	Lets walk forward together,
+	As husband and wife.
+
+	- And they lived together, happily ever after. -
+	",
+	"Buttons":
+	[
+		{
+			"Text":"I like a happy ending.",
+			"Response":"Me too."
+		},
+		{
+			"Text":"",
+			"Response":""
+		},
+		{
+			"Text":"",
+			"Response":""
+		},
+		{
+			"Text":"",
+			"Response":""
+		}
+	],
+	"Answer":"1"
+}

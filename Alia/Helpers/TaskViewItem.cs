@@ -11,9 +11,7 @@ namespace Alia
 		public TaskViewItem(TextTaskTable item, bool nextTaskLocked)
 		{
 			Id = item.Id;
-
-			Title = item.Name;	
-
+			Title = item.Name;
 			StatusColour = GetTaskColour (nextTaskLocked, item.Locked);
 		}
 
