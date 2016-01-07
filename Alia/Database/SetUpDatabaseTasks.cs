@@ -24,7 +24,7 @@ namespace Alia
 
 			textTasks.Add (new QuizTaskTable (14, TaskNames.AKinderQuestion, 205, 206));
 			textTasks.Add (new QuizTaskTable (15, TaskNames.AFollowUpQuestion, 206, 207));
-			textTasks.Add (new QuizTaskTable (15, TaskNames.TheEnd, 207, 000));
+			textTasks.Add (new QuizTaskTable (16, TaskNames.TheEnd, 207, 000));
 			return textTasks;
 		}
 	}

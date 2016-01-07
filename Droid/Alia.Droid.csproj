@@ -99,6 +99,7 @@
     <Compile Include="ISQLite_droid.cs" />
     <Compile Include="Custom Renderers\NativeAndroidListViewRenderer.cs" />
     <Compile Include="Custom Renderers\NativeAndroidListViewAdapter.cs" />
+    <Compile Include="Splash.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -125,6 +126,9 @@
     <AndroidResource Include="Resources\drawable-hdpi\AliaAppBackground.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\AliaAppBackground.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\AliaAppBackground.png" />
+    <AndroidResource Include="Resources\drawable\Alia.jpg" />
+    <AndroidResource Include="Resources\drawable\heart.png" />
+    <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

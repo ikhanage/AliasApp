@@ -107,7 +107,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Alia.csproj" />
-    <None Include="TaskTextFiles\TheEnd.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
@@ -144,5 +143,6 @@
     <EmbeddedResource Include="TaskTextFiles\ChildOfJuly.txt" />
     <EmbeddedResource Include="TaskTextFiles\ImmyQuiz.txt" />
     <EmbeddedResource Include="TaskTextFiles\HowMuchILoveYou.txt" />
+    <EmbeddedResource Include="TaskTextFiles\TheEnd.txt" />
   </ItemGroup>
 </Project>
