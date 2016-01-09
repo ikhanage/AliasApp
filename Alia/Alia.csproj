@@ -144,5 +144,8 @@
     <EmbeddedResource Include="TaskTextFiles\ImmyQuiz.txt" />
     <EmbeddedResource Include="TaskTextFiles\HowMuchILoveYou.txt" />
     <EmbeddedResource Include="TaskTextFiles\TheEnd.txt" />
+    <EmbeddedResource Include="TaskTextFiles\ToThePark.txt" />
+    <EmbeddedResource Include="TaskTextFiles\AmusementTime.txt" />
+    <EmbeddedResource Include="TaskTextFiles\RhymeTime.txt" />
   </ItemGroup>
 </Project>

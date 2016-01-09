@@ -17,6 +17,9 @@
 		ChildOfJuly,
 		HowMuchILoveYou,
 		ImmyQuiz,
-		TheEnd
+		TheEnd,
+		ToThePark,
+		AmusementTime,
+		RhymeTime
 	}
 }
