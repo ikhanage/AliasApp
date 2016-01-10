@@ -7,17 +7,17 @@ using Ninject;
 
 namespace Alia.Droid
 {
-	[Activity (Label = "Alia", Icon = "@drawable/heart", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "Alia", Icon = "@drawable/heart", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
-		protected override void OnCreate (Bundle bundle)
+		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			if (!Resolver.IsSet)
 				SetIoc();
 			
-			base.OnCreate (bundle);
+			base.OnCreate (savedInstanceState);
 
-			global::Xamarin.Forms.Forms.Init (this, bundle);
+			global::Xamarin.Forms.Forms.Init (this, savedInstanceState);
 
 			LoadApplication (new App ());
 		}
@@ -33,4 +33,3 @@ namespace Alia.Droid
 		}
 	}
 }
-
